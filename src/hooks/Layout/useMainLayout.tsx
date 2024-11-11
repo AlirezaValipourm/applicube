@@ -6,13 +6,13 @@ export const useMainLayout = (Children: NextPage) => {
     return function wrapped() {
 
         return (
-            <div className='bg-slate-100 dark:bg-slate-800'>
-                <NavBar />
-                <main>
+            <main className='container mx-auto'>
+                <div className='bg-slate-100 dark:bg-slate-800'>
+                    <NavBar />
                     <Children />
-                </main>
-                <Footer />
-            </div>
+                    <Footer />
+                </div>
+            </main>
         );
     }
 };
